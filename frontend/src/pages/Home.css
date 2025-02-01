@@ -1,0 +1,77 @@
+.home {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+input,
+select {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--button-hover);
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result a {
+  color: var(--button-bg);
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
+
+.qr-code {
+  margin-top: 20px;
+}
+
+.qr-code img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
