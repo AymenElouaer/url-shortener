@@ -18,6 +18,12 @@ app.use(
 
 app.use(express.json());
 app.use(errorHandler);
+
+// Test Route
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello, the backend is working!" });
+});
+
 // Routes
 app.use("/api", routes); // Use the routes defined in routes/index.js
 
