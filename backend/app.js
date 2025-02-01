@@ -10,9 +10,9 @@ const app = express();
 // Enable CORS for all origins (for testing)
 app.use(
   cors({
-    origin: "*", // Allow all origins (replace with your frontend URL in production)
+    origin: "https://url-shortener-hsmm4obsn-aymenelouaers-projects.vercel.app", // Allow all origins (replace with your frontend URL in production)
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 
