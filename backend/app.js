@@ -6,17 +6,18 @@ const errorHandler = require("./utils/errorHandler");
 require("dotenv").config();
 
 const app = express();
-app.use(errorHandler);
 
-// Enable CORS with specific frontend URL
-const corsOptions = {
-  origin: "https://url-shortener-eight-beta.vercel.app",
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-};
-app.use(cors(corsOptions));
+// Enable CORS for all origins (for testing)
+app.use(
+  cors({
+    origin: "*", // Allow all origins (replace with your frontend URL in production)
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 app.use(express.json());
-
+app.use(errorHandler);
 // Routes
 app.use("/api", routes); // Use the routes defined in routes/index.js
 
