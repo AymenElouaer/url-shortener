@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://url-shortener-backend-gamma.vercel.app"; // backend URL
+const API_URL = "https://url-shortener-api-liard.vercel.app"; // backend URL
 
 export const shortenUrl = async (longUrl, customAlias, expiration) => {
   const response = await axios.post(`${API_URL}/shorten`, {

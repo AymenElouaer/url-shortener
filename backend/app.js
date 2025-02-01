@@ -8,8 +8,13 @@ require("dotenv").config();
 const app = express();
 app.use(errorHandler);
 
-//Middleware
-app.use(cors());
+// Enable CORS with specific frontend URL
+const corsOptions = {
+  origin: "https://url-shortener-eight-beta.vercel.app",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
